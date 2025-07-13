@@ -482,9 +482,9 @@ class DistillationDPO(LightningModule):
                 noise_worse_teacher = self.do_forward(self.teacher, generated_worse_noised_sample_TF, generated_worse_noised_sample_TF.sparse(), partial_TF, t)
 
             
-            distil_loss = ((noise_better_teacher - noise_auxB) * (generated_better_noised_sample_tensor - generated_better_sample)).mean() \
-                        - ((noise_worse_teacher - noise_auxW) * (generated_worse_noised_sample_tensor - generated_worse_sample)).mean()
-
+            distil_loss = ((noise_worse_teacher - noise_auxW) * (generated_worse_noised_sample_tensor - generated_worse_sample)).mean() \
+                        - ((noise_better_teacher - noise_auxB) * (generated_better_noised_sample_tensor - generated_better_sample)).mean()
+                        
             generator_loss = distil_loss
 
             # log info on progress bar
