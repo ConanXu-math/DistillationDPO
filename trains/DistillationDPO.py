@@ -21,7 +21,7 @@ from utils.metrics import ChamferDistance, PrecisionRecall
 from utils.scheduling import beta_func
 from utils.metrics import ChamferDistance, PrecisionRecall, CompletionIoU, RMSE, EMD
 from utils.histogram_metrics import compute_hist_metrics 
-from models.minkunet import MinkRewardModel,MinkGlobalEnc,MinkUNetDiff
+from models.minkunet import MinkGlobalEnc,MinkUNetDiff
 import datasets.SemanticKITTI_dataset as SemanticKITTI_dataset
 
 class DistillationDPO(LightningModule):
