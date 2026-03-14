@@ -113,3 +113,11 @@ If you find our paper useful or relevant to your research, please kindly cite ou
 DistillationDPO is highly built on the following amazing open-source projects:
 
 [Lidiff](https://github.com/PRBonn/LiDiff): Scaling Diffusion Models to Real-World 3D LiDAR Scene Completion
+
+```
+export CUDA_HOME=/mnt/data/cuda-11.1
+export PATH="$CUDA_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
+source /mnt/data/DistillationDPO/.venv38/bin/activate
+export OMP_NUM_THREADS=16
+```

@@ -4,7 +4,45 @@ exp/
 # model weights
 checkpoints/
 
+# Python
 *.egg-info/
 *.egg/
-
+*.py[cod]
+*$py.class
+*.so
+.Python
 **/__pycache__/
+*.pyc
+
+# virtual env
+.venv38/
+venv/
+.venv/
+
+# build / install
+build/
+dist/
+*.egg
+.eggs/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs / local config
+*.log
+.env
+.env.local
+
+# local symlinks / dev paths
+DistillationDPO
+
+# third-party source (e.g. MinkowskiEngine unpacked)
+scripts/MinkowskiEngine-*/
